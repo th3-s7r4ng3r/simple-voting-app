@@ -18,3 +18,10 @@
 .credit {
   color: rgb(134, 134, 134);
 }
+
+.total-count{
+  font-size: 35rem;
+  position: absolute;
+  z-index: 0;
+  color: rgb(94, 94, 94);
+}

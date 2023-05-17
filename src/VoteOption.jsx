@@ -11,7 +11,18 @@ const VoteOption = ({player, onValueChange, voteBar}) => {
         setVoteCount(newCount);
 
         // passing the updated count and the array index to the parent component
-        onValueChange(player.id, newCount);
+        onValueChange(player.id, newCount, "add");
+    }
+
+    //onlick action of the remove vote button
+    const remVoteClick = () => {
+        if(voteCount > 0) {
+            const newCount = voteCount - 1;
+            setVoteCount(newCount);
+    
+            // passing the updated count and the array index to the parent component
+            onValueChange(player.id, newCount, "rem");
+        }
     }
 
     //displaying Vote Option component
@@ -25,7 +36,8 @@ const VoteOption = ({player, onValueChange, voteBar}) => {
         </div>
         <div>
           <h2 className='vote-count'>{voteCount}</h2>
-          <button className='vote-btn' onClick={voteClick}>Vote</button>
+          <button className='vote-btn fas fa-angle-up' onClick={voteClick}></button>
+          <button className='rem-vote-btn fas fa-angle-down' onClick={remVoteClick}></button>
         </div>
       </div>
     );
