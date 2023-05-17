@@ -1,19 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './VoteOption.css';
 
-const VoteOption = ({player}) => {
-    //vote count of the instance
+const VoteOption = ({player, onValueChange, voteBar}) => {
+    //vote count of the current instance
     const [voteCount, setVoteCount] = useState(0);
 
+    //onlick action of the vote button
     const voteClick = () => {
-        setVoteCount((prevVoteCount) => prevVoteCount + 1);
-    }
+        const newCount = voteCount + 1;
+        setVoteCount(newCount);
 
+        // passing the updated count and the array index to the parent component
+        onValueChange(player.id, newCount);
+    }
 
     //displaying Vote Option component
     return(
         <div className='container'>
-        <div className='vote-bar'></div>
+        <div className='vote-bar' style={{width:voteBar + 'vw'}}></div>
         <img src={player.image} className='option-image' alt='Option Image'/>
         <div className='name-section'>
           <h3>{player.name}</h3>

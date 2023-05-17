@@ -17,9 +17,10 @@
   .vote-bar{
     position:absolute;
     box-sizing: border-box;
-    border-radius: 30px;
-    width: 40vw;
-    height: 20vh;
+    border-radius: 25px;
+    margin: 0 1vh;
+    width: 0vh;
+    height: 18vh;
     background-color: rgba(115, 115, 115, 0.225);
     z-index: -1;
     transition: 1s;
