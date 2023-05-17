@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    box-sizing: border-box;
+    border-radius: 30px;
+    background-color: rgb(44, 44, 44);
+    transition: 0.3s;
+    box-shadow: 5px 5px 75px rgba(0, 0, 0, 0.31);
+    margin: 12px;
+    width: 55vw;
+    height: 20vh;
+    z-index: 1;
+  
+  }
+  .vote-bar{
+    position:absolute;
+    box-sizing: border-box;
+    border-radius: 30px;
+    width: 40vw;
+    height: 20vh;
+    background-color: rgba(115, 115, 115, 0.225);
+    z-index: -1;
+    transition: 1s;
+  }
+  .option-image {
+    border-radius: 250px;
+    width: 20vh;
+    height: 20vh;
+    margin: 15px 20px;
+    object-fit: cover;
+  }
+  .name-section {
+    margin: 0px 10px;
+    text-align: left;
+    min-width: 25vw;
+  }
+  .name-section h3 {
+    font-size: 2rem;
+    margin: 0px 0px 10px;
+  }
+  .name-section p{
+    font-size: 1.25rem;
+    margin: 0px;
+  }
+  .vote-btn {
+    color: black;
+    box-sizing: border-box;
+    padding: 10px 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 250px;
+    border: none;
+    margin: 0px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .vote-btn:hover{
+    background-color: rgb(106, 203, 119);
+  }
+  .vote-count {
+    margin: 10px;
+  }
