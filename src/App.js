@@ -3,6 +3,7 @@ import { useState } from 'react';
 import VoteOption from './VoteOption';
 
 //storing data for different players inside a list
+//Only need to add a new json element to add a new option in the voting
 const players = [{
   "id" : "0",
   "name" : "Kumar Sangakkara",
@@ -24,7 +25,7 @@ const players = [{
 function App() {
   //declaring variable for all votes
   const [totalVotes, setTotalVotes] = useState(0);
-  const [voteBarValueArray, setVoteBarValueArray] = useState([0, 0, 0]);
+  const [voteBarValueArray, setVoteBarValueArray] = useState([]);
 
   //function to get total votes
   const getTotalVotes = (index, childVoteCount, type) => {
