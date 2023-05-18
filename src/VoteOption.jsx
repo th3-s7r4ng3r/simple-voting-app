@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './VoteOption.css';
+import './css/VoteOption.css';
 
 const VoteOption = ({player, onValueChange, voteBar}) => {
     //vote count of the current instance
